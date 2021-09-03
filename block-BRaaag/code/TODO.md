@@ -1,22 +1,18 @@
-#### Movie App with JSX
+#### Movie App
 
-- Copy the code from previous exercise
-- Refactor it to use `JSX` using babel
-- Use the links given below for babel
-- Make sure to follow the example for writing JSX
+So before going into React let's try to understand the problem it solves. To do that we will be making a small application using JavaScript named "Movie Watch List App". To create this application use HTML, CSS and JavaScript.
 
-#### Basic Info
+![Movie Watch List](https://github.com/nnnkit/ac-js-images/blob/master/react/movie-watch.jpg?raw=true)
 
-CDN url for babel to use in our project.
+#### Requirements
 
-```html
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-```
+- User can enter a movie name
+- If you press enter the movie name will be added to the list below
+- Each movie will have status (either watched or to watch)
+- Default status will be `To Watch`
+- Clicking on button should change the state form `To Watch` to `Watched` or vice versa.
 
-While using Babel don't forget to change `type` attribute of `script` element.
+#### How to make app
 
-```html
-<script type="text/babel">
-  // JSX code goes here
-</script>
-```
+- In this folder you will find a `html`, `css` and `js` file.
+- Add code in the respective files
