@@ -1,21 +1,18 @@
-#### Refactor with React and ReactDOM
+#### Movie App
 
-- Copy the code for Movie Watch List app you created in the last exercise
-- Refactor the app to use `React` and `ReactDOM`
-- We will use `React` to create element and `ReactDOM` to render the element on DOM
-- Check if the application is working properly
+So before going into React let's try to understand the problem it solves. To do that we will be making a small application using JavaScript named "Movie Watch List App". To create this application use HTML, CSS and JavaScript.
 
-#### Extra Info
+![Movie Watch List](https://github.com/nnnkit/ac-js-images/blob/master/react/movie-watch.jpg?raw=true)
 
-CDN url for React and ReactDOM.
+#### Requirements
 
-```html
-<script
-  crossorigin
-  src="https://unpkg.com/react@17/umd/react.development.js"
-></script>
-<script
-  crossorigin
-  src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
-></script>
-```
+- User can enter a movie name
+- If you press enter the movie name will be added to the list below
+- Each movie will have status (either watched or to watch)
+- Default status will be `To Watch`
+- Clicking on button should change the state form `To Watch` to `Watched` or vice versa.
+
+#### How to make app
+
+- In this folder you will find a `html`, `css` and `js` file.
+- Add code in the respective files
