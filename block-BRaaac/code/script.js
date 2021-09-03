@@ -16,7 +16,14 @@ input.addEventListener('keyup', (event) => {
 function elm(type, attr = {}, ...children) {
   let element = document.createElement(type);
   for (let key in attr) {
-    element[key] = attr[key];
+    if (key.startsWith('data-')) {
+      element.setAttribute(key, attr[key]);
+    } else if (key.startsWith('on')) {
+      let eventType = key.replace('on', '').toLowerCase();
+      element.addEventListener(eventType, attr[key]);
+    } else {
+      element[key] = attr[key];
+    }
   }
   children.forEach((child) => {
     if (typeof child === 'object') {
@@ -42,22 +49,21 @@ function handleChange(event) {
 function createMovieUI(data = allMovies) {
   rootElm.innerText = '';
   data.forEach((movie, i) => {
-    // let button = document.querySelector('.delete');
     let li = elm(
       'li',
       {},
-      elm('label', {}, movie.name),
+      elm('label', { for: i }, movie.name),
       elm(
         'button',
         {
-          className: 'delete',
           id: i,
+          onClick: handleChange,
         },
         movie.watched ? 'Watched' : 'To Watch'
       )
     );
     rootElm.append(li);
-    // button.addEventListener('click', handleChange);
+
     input.innerHTML = '';
   });
 }
