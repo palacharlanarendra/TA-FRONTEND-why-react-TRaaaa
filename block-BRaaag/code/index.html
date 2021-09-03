@@ -51,25 +51,10 @@
       function createMovieUI(data = allMovies) {
         // rootElm.innerText = '';
         let ui = data.map((movie, i) => {
-          // let li = elm(
-          //   'li',
-          //   {},
-          //   elm('label', { for: i }, movie.name),
-          //   elm(
-          //     'button',
-          //     {
-          //       id: i,
-          //       onClick: handleChange,
-          //     },
-          //     movie.watched ? 'Watched' : 'To Watch'
-          //   )
-          // );
-
-          // input.innerHTML = '';
           return (
-            <li>
-              <label>{movie.name}</label>
-              <button id={i} onClick={(event) => handleChange}>
+            <li key={movie.name}>
+              <label htmlFor={i}>{movie.name}</label>
+              <button data-id={i} onClick={handleChange}>
                 {movie.watched ? 'Watched' : 'To Watch'}
               </button>
             </li>
