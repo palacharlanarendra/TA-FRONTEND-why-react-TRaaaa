@@ -23,6 +23,20 @@
   <body class="bg-pink-100">
     <div id="root"></div>
     <script type="text/babel">
+      let monthNames = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ];
       let cardInfo = {
         title: 'City Lights in New York',
         date: new Date('2017-01-26'),
@@ -34,27 +48,30 @@
         imageURL:
           'https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
       };
-      let h1 = (
+      let ui = (
         <div>
-          <section class='container'>
-            <figure class='figure'>
+          <section className='container'>
+            <figure className='figure'>
               <img src={cardInfo.imageURL} alt='Desert' />
-              <p class='tag bottom'>Photos</p>
-              <p class='tag top flex-text'>
-                <span class='tag-inner'>27 MAR</span>
+              <p className='tag bottom'>Photos</p>
+              <p className='tag top flex-text'>
+                <span className='tag-inner'>
+                  {cardInfo.date.getDate()}{' '}
+                  {monthNames[cardInfo.date.getMonth()].slice(0, 3)}
+                </span>
               </p>
             </figure>
-            <article class='article'>
-              <h1 class='heading'>{cardInfo.title}</h1>
-              <h4 class='md-heading'>{cardInfo.subTitle}</h4>
-              <p class='paragraph'>{cardInfo.description}</p>
-              <div class='flex logos'>
+            <article className='article'>
+              <h1 className='heading'>{cardInfo.title}</h1>
+              <h4 className='md-heading'>{cardInfo.subTitle}</h4>
+              <p className='paragraph'>{cardInfo.description}</p>
+              <div className='flex logos'>
                 <div>
-                  <i class='fas fa-dot-circle'></i>
+                  <i className='fas fa-dot-circle'></i>
                   <span>6 mins ago</span>
                 </div>
                 <div>
-                  <i class='far fa-comment'></i>
+                  <i className='far fa-comment'></i>
                   <span>39 comments</span>
                 </div>
               </div>
@@ -62,7 +79,7 @@
           </section>
         </div>
       );
-      ReactDOM.render(h1, document.getElementById('root'));
+      ReactDOM.render(ui, document.getElementById('root'));
     </script>
   </body>
 </html>
