@@ -127,8 +127,9 @@ table {
   max-width: 500px;
   width: 100%;
   padding: 2rem 3rem;
-  border: 2px solid green;
+  border: 2px solid rgb(0, 0, 0);
   margin: 0 auto;
+  background-color: rgb(251, 223, 227);
 }
 .heading {
   color: rgb(0, 0, 0);
@@ -193,4 +194,8 @@ table {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+}
+.article {
+  background-color: white;
+  padding: 1rem;
 }
