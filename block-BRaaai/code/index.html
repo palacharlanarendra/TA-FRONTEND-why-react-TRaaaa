@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/2bbf3cce3b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body class="bg-pink-100">
+    <div id="root"></div>
+    <script type="text/babel">
+      let h1 = (
+        <div>
+          <section class='container'>
+            <figure class='figure'>
+              <img
+                src='https://images.unsplash.com/photo-1542401886-65d6c61db217?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGVzZXJ0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+                alt='Desert'
+              />
+              <p class='tag bottom'>Photos</p>
+              <p class='tag top flex-text'>
+                <span class='tag-inner'>27 MAR</span>
+              </p>
+            </figure>
+            <article class='article'>
+              <h1 class='heading'>City Lights in New York</h1>
+              <h4 class='md-heading'>The city that never sleeps</h4>
+              <p class='paragraph'>
+                New York, the largest city in the U.S., is an architectural
+                marvel with plenty of historic monuments, magnificent building
+                and countless dazzling skyscrapers.
+              </p>
+              <div class='flex logos'>
+                <div>
+                  <i class='fas fa-dot-circle'></i>
+                  <span>6 mins ago</span>
+                </div>
+                <div>
+                  <i class='far fa-comment'></i>
+                  <span>39 comments</span>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      );
+      ReactDOM.render(h1, document.getElementById('root'));
+    </script>
+  </body>
+</html>
