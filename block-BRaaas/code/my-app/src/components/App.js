@@ -3,16 +3,9 @@ function handleAlert() {
   alert('Hello React Event');
 }
 function handleClick() {
-  let ul = (
-    <ul>
-      <li>
-        To learn React use <a href='https://reactjs.org'>https://reactjs.org</a>
-      </li>
-      <li>React and ReactDOM works together</li>
-      <li>Babel helps in writing JSX</li>
-    </ul>
-  );
-  alert(`${ul}`);
+  alert(`To learn React use 'https://reactjs.org'`);
+  alert(`React and ReactDOM works together`);
+  alert(`Babel helps in writing JSX`);
 }
 function showName(name) {
   alert(`Hello ${name}`);
