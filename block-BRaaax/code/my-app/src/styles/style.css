@@ -1,22 +1,22 @@
-.tertiary {
+.button--tertiary {
   background-color: grey;
 }
-.secondary {
+.button--secondary {
   background-color: rgb(94, 61, 184);
 }
-.primary {
+.button--primary {
   background-color: rgb(238, 114, 114);
 }
-#large {
+.button--large {
   width: 300px;
 }
-#medium {
+.button--medium {
   width: 200px;
 }
-#small {
+.button--small {
   width: 100px;
 }
-button {
+.button {
   display: block;
   margin: 20px 0;
   padding: 20px;
