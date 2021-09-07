@@ -1,40 +1,40 @@
 function Work() {
   return (
-    <section class='work padding'>
-      <div class='container'>
-        <header class='sec-header text-center'>
-          <h2 class='heading'>Our Work</h2>
-          <div class='dot-wrapper'>
-            <div class='dot'></div>
-            <div class='dot'></div>
-            <div class='dot'></div>
+    <section className='work padding'>
+      <div className='container'>
+        <header className='sec-header text-center'>
+          <h2 className='heading'>Our Work</h2>
+          <div className='dot-wrapper'>
+            <div className='dot'></div>
+            <div className='dot'></div>
+            <div className='dot'></div>
           </div>
         </header>
-        <div class='flex'>
-          <div class='flex-23'>
+        <div className='flex'>
+          <div className='flex-23'>
             <img
-              class='flexible-img'
+              className='flexible-img'
               src='../../images/work-image1.jpg'
               alt='Work 1'
             />
           </div>
-          <div class='flex-23'>
+          <div className='flex-23'>
             <img
-              class='flexible-img'
+              className='flexible-img'
               src='../../images/work-image2.jpg'
               alt='Work 1'
             />
           </div>
-          <div class='flex-23'>
+          <div className='flex-23'>
             <img
-              class='flexible-img'
+              className='flexible-img'
               src='../../images/work-image3.jpg'
               alt='Work 1'
             />
           </div>
-          <div class='flex-23'>
+          <div className='flex-23'>
             <img
-              class='flexible-img'
+              className='flexible-img'
               src='../../images/work-image4.jpg'
               alt='Work 1'
             />

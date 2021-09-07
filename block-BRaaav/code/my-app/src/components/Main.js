@@ -6,11 +6,13 @@ import Blog from './Blog';
 function Main() {
   return (
     <>
-      <Hero />
-      <About />
-      <Blog />
-      <Work />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Blog />
+        <Work />
+        <Contact />
+      </main>
     </>
   );
 }
