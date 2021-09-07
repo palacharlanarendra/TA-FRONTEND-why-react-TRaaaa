@@ -1,26 +1,36 @@
+import { buttonSizes, buttonTypes } from './buttonInfo';
 function App() {
   return (
     <>
-      <Button label='Button' />
-      <Button size='small' label='Button' type='secondary' />
+      <Button label='Click Me' />
       <Button
-        size='large'
-        label='Button'
-        type='tertiary'
+        size={buttonSizes.SMALL}
+        label='Click Me'
+        type={buttonTypes.SECONDARY}
+      />
+      <Button
+        size={buttonSizes.MEDIUM}
+        label='Click Me'
+        type={buttonTypes.TERTIARY}
         onClickHandler={() => alert('You Clicked Me!')}
       />
+      <Button disabled />
     </>
   );
 }
 function Button(props) {
+  function getStyles() {
+    let { type = buttonTypes.PRIMARY, size = buttonSizes.MEDIUM } = props;
+    return `button button--${type} button--${size}`;
+  }
   return (
     <>
       <button
-        className={props.type}
-        id={props.size}
-        onClick={() => props.onClickHandler()}
+        onClick={props.onClickHandler}
+        className={getStyles()}
+        disabled={props.disabled}
       >
-        {props.label}
+        {props.label || 'Button'}
       </button>
     </>
   );
