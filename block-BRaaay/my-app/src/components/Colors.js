@@ -18,8 +18,16 @@ function Colors() {
 function Color(props) {
   return (
     <>
-      {props.some.map((color) => (
-        <div className='some' style={{ backgroundColor: color }}></div>
+      {props.some.map((color, i) => (
+        <>
+          <div className='flex flex-column'>
+            <div className='some' style={{ backgroundColor: color }}></div>
+            <div>
+              <span>{color}</span>
+              <span class='number'>{i === 0 ? 50 : i * 100}</span>
+            </div>
+          </div>
+        </>
       ))}
     </>
   );
